@@ -25,16 +25,11 @@ with custom kernels -off-.
 
 import torch
 
-torch.set_default_dtype(torch.float64)
+torch.set_default_dtype(torch.float32)
 
 import hippynn
-import os
 
-netname = "TEST_ALUMINUM_MODEL_torch64"
-
-# Get the absolute path to the dataset before changing directories
-script_dir = os.path.dirname(os.path.abspath(__file__))
-dataset_path = os.path.join(script_dir, "datasets", "ani-al-master", "data", "Al-data")
+netname = "TEST_ALUMINUM_MODEL_torch32"
 
 if torch.cuda.is_available():
     # If GPU is available, we train to 80/10/10 split.
@@ -50,20 +45,20 @@ else:
     # Approximate timing 10s/epoch
 
 with hippynn.tools.active_directory(netname):
-    with hippynn.tools.log_terminal("training_log_2.txt", "wt"):
+    with hippynn.tools.log_terminal("training_log_torch32.txt", "wt"):
 
         # Hyperparameters for the network
         network_params = {
-            "possible_species": [0, 13],     
-            "n_features": 10,                 
-            "n_sensitivities": 20,            
-            "dist_soft_min": torch.tensor(1.25, dtype=torch.float64),    
-            "dist_soft_max": torch.tensor(7.0, dtype=torch.float64),     
-            "dist_hard_max": torch.tensor(7.5, dtype=torch.float64),     
-            "n_interaction_layers": 2,        
-            "n_atom_layers": 3,               
-            "sensitivity_type": "inverse",    
-            "resnet": True,                   
+            "possible_species": [0, 13],
+            "n_features": 10,
+            "n_sensitivities": 20,
+            "dist_soft_min": 1.25,
+            "dist_soft_max": 7,
+            "dist_hard_max": 7.5,
+            "n_interaction_layers": 1,
+            "n_atom_layers": 3,
+            "sensitivity_type": "inverse",
+            "resnet": True,
         }
         print("Network hyperparameters:")
         print(network_params)
@@ -100,7 +95,7 @@ with hippynn.tools.active_directory(netname):
         l2_reg = loss.l2reg(network)
 
         loss_error = 1e2 * (rmse_energy + mae_energy) + (force_mae + force_rmse)
-        loss_regularization = torch.tensor(0.000001, dtype=torch.float64) * l2_reg + rbar
+        loss_regularization = 1e-6 * l2_reg + rbar
         train_loss = loss_error + loss_regularization
 
         validation_losses = {
@@ -141,7 +136,7 @@ with hippynn.tools.active_directory(netname):
 
         torch.set_default_dtype(torch.float64)  # Temporary for data pre-processing
         database = PyAniDirectoryDB(
-            directory=dataset_path,
+            directory="/Users/andrewtrepagnier/Forks/hippynn-precision-typed/hippynn-precision-typed/examples/datasets/ani-al-master/data/Al-data",
             seed=1001,  # Random seed for splitting data
             quiet=False,
             allow_unfound=True,  # allows post-loading preprocessing of arrays
@@ -165,10 +160,10 @@ with hippynn.tools.active_directory(netname):
         database.targets = db_info["targets"]
 
         # Set dtypes back
-        torch.set_default_dtype(torch.float64)
-        # for k, v in arrays.items():
-        #     if v.dtype == torch.float64:
-        #         arrays[k] = v.to(torch.float64)
+        torch.set_default_dtype(torch.float32)
+        for k, v in arrays.items():
+            if v.dtype == torch.float64:
+                arrays[k] = v.to(torch.float32)
 
         database.make_trainvalidtest_split(test_size=test_size, valid_size=valid_size)
 
@@ -182,11 +177,11 @@ with hippynn.tools.active_directory(netname):
         # Fit the non-interacting energies by examining the database.
         from hippynn.pretraining import hierarchical_energy_initialization
 
-        hierarchical_energy_initialization(henergy, database, peratom=True, energy_name="energyperatom", decay_factor=torch.tensor(0.01, dtype=torch.float64))
+        hierarchical_energy_initialization(henergy, database, peratom=True, energy_name="energyperatom", decay_factor=1e-2)
 
         from hippynn.experiment.controllers import RaiseBatchSizeOnPlateau, PatienceController
 
-        optimizer = torch.optim.Adam(training_modules.model.parameters(), lr= torch.tensor(0.001, dtype=torch.float64))
+        optimizer = torch.optim.Adam(training_modules.model.parameters(), lr=1e-3)
 
         scheduler = RaiseBatchSizeOnPlateau(
             optimizer=optimizer,

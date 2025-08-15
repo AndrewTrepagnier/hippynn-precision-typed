@@ -1,0 +1,1058 @@
+Network hyperparameters:
+{'possible_species': [0, 13], 'n_features': 10, 'n_sensitivities': 20, 'dist_soft_min': 1.25, 'dist_soft_max': 7, 'dist_hard_max': 7.5, 'n_interaction_layers': 1, 'n_atom_layers': 3, 'sensitivity_type': 'inverse', 'resnet': True}
+Determined Inputs: ["Cells(db_name='cell')", "Positions(db_name='coordinates')", "Species(db_name='species')"]
+Determined Outputs: ['L^P_Reg(HIPNN,p=2)', 'T/Atom', 'force', 'HEnergy.mol_energy', 'RperAtom']
+Determined Targets: ['HEnergy.mol_energy', 'force', 'T/Atom', "Species(db_name='species')"]
+Device was not specified. Attempting to default to device: cpu
+Gathering data from files:
+	/Users/andrewtrepagnier/Forks/hippynn-precision-typed/hippynn-precision-typed/examples/datasets/ani-al-master/data/Al-data/data-1.h5
+	/Users/andrewtrepagnier/Forks/hippynn-precision-typed/hippynn-precision-typed/examples/datasets/ani-al-master/data/Al-data/data-10.h5
+	/Users/andrewtrepagnier/Forks/hippynn-precision-typed/hippynn-precision-typed/examples/datasets/ani-al-master/data/Al-data/data-11.h5
+	/Users/andrewtrepagnier/Forks/hippynn-precision-typed/hippynn-precision-typed/examples/datasets/ani-al-master/data/Al-data/data-12.h5
+	/Users/andrewtrepagnier/Forks/hippynn-precision-typed/hippynn-precision-typed/examples/datasets/ani-al-master/data/Al-data/data-13.h5
+	/Users/andrewtrepagnier/Forks/hippynn-precision-typed/hippynn-precision-typed/examples/datasets/ani-al-master/data/Al-data/data-14.h5
+	/Users/andrewtrepagnier/Forks/hippynn-precision-typed/hippynn-precision-typed/examples/datasets/ani-al-master/data/Al-data/data-15.h5
+	/Users/andrewtrepagnier/Forks/hippynn-precision-typed/hippynn-precision-typed/examples/datasets/ani-al-master/data/Al-data/data-16.h5
+	/Users/andrewtrepagnier/Forks/hippynn-precision-typed/hippynn-precision-typed/examples/datasets/ani-al-master/data/Al-data/data-17.h5
+	/Users/andrewtrepagnier/Forks/hippynn-precision-typed/hippynn-precision-typed/examples/datasets/ani-al-master/data/Al-data/data-18.h5
+	/Users/andrewtrepagnier/Forks/hippynn-precision-typed/hippynn-precision-typed/examples/datasets/ani-al-master/data/Al-data/data-19.h5
+	/Users/andrewtrepagnier/Forks/hippynn-precision-typed/hippynn-precision-typed/examples/datasets/ani-al-master/data/Al-data/data-2.h5
+	/Users/andrewtrepagnier/Forks/hippynn-precision-typed/hippynn-precision-typed/examples/datasets/ani-al-master/data/Al-data/data-20.h5
+	/Users/andrewtrepagnier/Forks/hippynn-precision-typed/hippynn-precision-typed/examples/datasets/ani-al-master/data/Al-data/data-21.h5
+	/Users/andrewtrepagnier/Forks/hippynn-precision-typed/hippynn-precision-typed/examples/datasets/ani-al-master/data/Al-data/data-22.h5
+	/Users/andrewtrepagnier/Forks/hippynn-precision-typed/hippynn-precision-typed/examples/datasets/ani-al-master/data/Al-data/data-23.h5
+	/Users/andrewtrepagnier/Forks/hippynn-precision-typed/hippynn-precision-typed/examples/datasets/ani-al-master/data/Al-data/data-24.h5
+	/Users/andrewtrepagnier/Forks/hippynn-precision-typed/hippynn-precision-typed/examples/datasets/ani-al-master/data/Al-data/data-25.h5
+	/Users/andrewtrepagnier/Forks/hippynn-precision-typed/hippynn-precision-typed/examples/datasets/ani-al-master/data/Al-data/data-26.h5
+	/Users/andrewtrepagnier/Forks/hippynn-precision-typed/hippynn-precision-typed/examples/datasets/ani-al-master/data/Al-data/data-27.h5
+	/Users/andrewtrepagnier/Forks/hippynn-precision-typed/hippynn-precision-typed/examples/datasets/ani-al-master/data/Al-data/data-28.h5
+	/Users/andrewtrepagnier/Forks/hippynn-precision-typed/hippynn-precision-typed/examples/datasets/ani-al-master/data/Al-data/data-29.h5
+	/Users/andrewtrepagnier/Forks/hippynn-precision-typed/hippynn-precision-typed/examples/datasets/ani-al-master/data/Al-data/data-3.h5
+	/Users/andrewtrepagnier/Forks/hippynn-precision-typed/hippynn-precision-typed/examples/datasets/ani-al-master/data/Al-data/data-30.h5
+	/Users/andrewtrepagnier/Forks/hippynn-precision-typed/hippynn-precision-typed/examples/datasets/ani-al-master/data/Al-data/data-31.h5
+	/Users/andrewtrepagnier/Forks/hippynn-precision-typed/hippynn-precision-typed/examples/datasets/ani-al-master/data/Al-data/data-32.h5
+	/Users/andrewtrepagnier/Forks/hippynn-precision-typed/hippynn-precision-typed/examples/datasets/ani-al-master/data/Al-data/data-33.h5
+	/Users/andrewtrepagnier/Forks/hippynn-precision-typed/hippynn-precision-typed/examples/datasets/ani-al-master/data/Al-data/data-34.h5
+	/Users/andrewtrepagnier/Forks/hippynn-precision-typed/hippynn-precision-typed/examples/datasets/ani-al-master/data/Al-data/data-35.h5
+	/Users/andrewtrepagnier/Forks/hippynn-precision-typed/hippynn-precision-typed/examples/datasets/ani-al-master/data/Al-data/data-36.h5
+	/Users/andrewtrepagnier/Forks/hippynn-precision-typed/hippynn-precision-typed/examples/datasets/ani-al-master/data/Al-data/data-37.h5
+	/Users/andrewtrepagnier/Forks/hippynn-precision-typed/hippynn-precision-typed/examples/datasets/ani-al-master/data/Al-data/data-38.h5
+	/Users/andrewtrepagnier/Forks/hippynn-precision-typed/hippynn-precision-typed/examples/datasets/ani-al-master/data/Al-data/data-39.h5
+	/Users/andrewtrepagnier/Forks/hippynn-precision-typed/hippynn-precision-typed/examples/datasets/ani-al-master/data/Al-data/data-4.h5
+	/Users/andrewtrepagnier/Forks/hippynn-precision-typed/hippynn-precision-typed/examples/datasets/ani-al-master/data/Al-data/data-40.h5
+	/Users/andrewtrepagnier/Forks/hippynn-precision-typed/hippynn-precision-typed/examples/datasets/ani-al-master/data/Al-data/data-41.h5
+	/Users/andrewtrepagnier/Forks/hippynn-precision-typed/hippynn-precision-typed/examples/datasets/ani-al-master/data/Al-data/data-42.h5
+	/Users/andrewtrepagnier/Forks/hippynn-precision-typed/hippynn-precision-typed/examples/datasets/ani-al-master/data/Al-data/data-43.h5
+	/Users/andrewtrepagnier/Forks/hippynn-precision-typed/hippynn-precision-typed/examples/datasets/ani-al-master/data/Al-data/data-5.h5
+	/Users/andrewtrepagnier/Forks/hippynn-precision-typed/hippynn-precision-typed/examples/datasets/ani-al-master/data/Al-data/data-6.h5
+	/Users/andrewtrepagnier/Forks/hippynn-precision-typed/hippynn-precision-typed/examples/datasets/ani-al-master/data/Al-data/data-7.h5
+	/Users/andrewtrepagnier/Forks/hippynn-precision-typed/hippynn-precision-typed/examples/datasets/ani-al-master/data/Al-data/data-8.h5
+	/Users/andrewtrepagnier/Forks/hippynn-precision-typed/hippynn-precision-typed/examples/datasets/ani-al-master/data/Al-data/data-9.h5
+Data Files:   0%|          | 0/43 [00:00<?, ?file/s]
+Data Groups:   0%|          | 0/98 [00:00<?, ?group/s][A
+                                                      [A
+Data Groups:   0%|          | 0/59 [00:00<?, ?group/s][A
+                                                      [A
+Data Groups:   0%|          | 0/60 [00:00<?, ?group/s][A
+                                                      [A
+Data Groups:   0%|          | 0/66 [00:00<?, ?group/s][A
+                                                      [A
+Data Groups:   0%|          | 0/66 [00:00<?, ?group/s][A
+                                                      [A
+Data Groups:   0%|          | 0/69 [00:00<?, ?group/s][A
+                                                      [A
+Data Groups:   0%|          | 0/59 [00:00<?, ?group/s][A
+                                                      [A
+Data Groups:   0%|          | 0/63 [00:00<?, ?group/s][A
+                                                      [A
+Data Groups:   0%|          | 0/66 [00:00<?, ?group/s][A
+                                                      [A
+Data Groups:   0%|          | 0/53 [00:00<?, ?group/s][A
+                                                      [A
+Data Groups:   0%|          | 0/53 [00:00<?, ?group/s][A
+                                                      [A
+Data Groups:   0%|          | 0/113 [00:00<?, ?group/s][A
+                                                       [A
+Data Groups:   0%|          | 0/90 [00:00<?, ?group/s][A
+                                                      [A
+Data Groups:   0%|          | 0/69 [00:00<?, ?group/s][A
+                                                      [A
+Data Groups:   0%|          | 0/55 [00:00<?, ?group/s][A
+                                                      [A
+Data Groups:   0%|          | 0/58 [00:00<?, ?group/s][A
+                                                      [A
+Data Groups:   0%|          | 0/73 [00:00<?, ?group/s][A
+                                                      [A
+Data Groups:   0%|          | 0/76 [00:00<?, ?group/s][A
+                                                      [A
+Data Groups:   0%|          | 0/79 [00:00<?, ?group/s][A
+                                                      [A
+Data Groups:   0%|          | 0/63 [00:00<?, ?group/s][A
+                                                      [A
+Data Groups:   0%|          | 0/63 [00:00<?, ?group/s][A
+                                                      [A
+Data Groups:   0%|          | 0/65 [00:00<?, ?group/s][A
+                                                      [A
+Data Groups:   0%|          | 0/72 [00:00<?, ?group/s][A
+                                                      [A
+Data Groups:   0%|          | 0/60 [00:00<?, ?group/s][A
+                                                      [A
+Data Groups:   0%|          | 0/64 [00:00<?, ?group/s][A
+                                                      [A
+Data Groups:   0%|          | 0/61 [00:00<?, ?group/s][A
+                                                      [A
+Data Groups:   0%|          | 0/83 [00:00<?, ?group/s][A
+                                                      [A
+Data Groups:   0%|          | 0/68 [00:00<?, ?group/s][A
+                                                      [A
+Data Groups:   0%|          | 0/67 [00:00<?, ?group/s][A
+                                                      [A
+Data Groups:   0%|          | 0/51 [00:00<?, ?group/s][A
+                                                      [A
+Data Groups:   0%|          | 0/52 [00:00<?, ?group/s][A
+                                                      [A
+Data Groups:   0%|          | 0/63 [00:00<?, ?group/s][A
+                                                      [A
+Data Groups:   0%|          | 0/54 [00:00<?, ?group/s][A
+                                                      [A
+Data Groups:   0%|          | 0/66 [00:00<?, ?group/s][A
+                                                      [A
+Data Groups:   0%|          | 0/69 [00:00<?, ?group/s][A
+                                                      [A
+Data Groups:   0%|          | 0/87 [00:00<?, ?group/s][A
+                                                      [A
+Data Groups:   0%|          | 0/78 [00:00<?, ?group/s][A
+                                                      [A
+Data Groups:   0%|          | 0/112 [00:00<?, ?group/s][A
+                                                       [A
+Data Groups:   0%|          | 0/62 [00:00<?, ?group/s][A
+                                                      [AData Files:  91%|######### | 39/43 [00:01<00:00, 38.57file/s]
+Data Groups:   0%|          | 0/58 [00:00<?, ?group/s][A
+                                                      [A
+Data Groups:   0%|          | 0/66 [00:00<?, ?group/s][A
+                                                      [A
+Data Groups:   0%|          | 0/71 [00:00<?, ?group/s][A
+                                                      [A
+Data Groups:   0%|          | 0/58 [00:00<?, ?group/s][A
+                                                      [A                                                             Processing Batches:   0%|          | 0/2938 [00:00<?, ?batch/s]                                                               Arrays found:  ['cell', 'coordinates', 'energy', 'fermi', 'force', 'species', 'sys_number']
+Data types:
+{'cell': dtype('float64'), 'coordinates': dtype('float64'), 'energy': dtype('float64'), 'fermi': dtype('float64'), 'force': dtype('float64'), 'species': dtype('int64'), 'sys_number': dtype('int64')}
+All arrays:
+--------------------------------------------------------------------------------------
+| Name                           | dtype              | shape                        |
+--------------------------------------------------------------------------------------
+| cell                           | dtype('float64')   | (6352, 3, 3)                 |
+| coordinates                    | dtype('float64')   | (6352, 249, 3)               |
+| energy                         | dtype('float64')   | (6352,)                      |
+| fermi                          | dtype('float64')   | (6352,)                      |
+| force                          | dtype('float64')   | (6352, 249, 3)               |
+| species                        | dtype('int64')     | (6352, 249)                  |
+| sys_number                     | dtype('int64')     | (6352,)                      |
+--------------------------------------------------------------------------------------
+Database inputs and/or targets not specified. The database will not be checked against and model inputs and targets (db_info).
+Database: Using auto-generated data indices
+Adding split indices for split: test
+Arrays for split: test
+--------------------------------------------------------------------------------------
+| Name                           | dtype              | shape                        |
+--------------------------------------------------------------------------------------
+| cell                           | dtype('float32')   | (5716, 3, 3)                 |
+| coordinates                    | dtype('float32')   | (5716, 249, 3)               |
+| energy                         | dtype('float32')   | (5716,)                      |
+| fermi                          | dtype('float32')   | (5716,)                      |
+| force                          | dtype('float32')   | (5716, 249, 3)               |
+| species                        | dtype('int64')     | (5716, 249)                  |
+| sys_number                     | dtype('int64')     | (5716,)                      |
+| indices                        | dtype('int64')     | (5716,)                      |
+| energyperatom                  | dtype('float32')   | (5716,)                      |
+| split_indices                  | dtype('int64')     | (5716,)                      |
+--------------------------------------------------------------------------------------
+Adding split indices for split: valid
+Arrays for split: valid
+--------------------------------------------------------------------------------------
+| Name                           | dtype              | shape                        |
+--------------------------------------------------------------------------------------
+| cell                           | dtype('float32')   | (63, 3, 3)                   |
+| coordinates                    | dtype('float32')   | (63, 249, 3)                 |
+| energy                         | dtype('float32')   | (63,)                        |
+| fermi                          | dtype('float32')   | (63,)                        |
+| force                          | dtype('float32')   | (63, 249, 3)                 |
+| species                        | dtype('int64')     | (63, 249)                    |
+| sys_number                     | dtype('int64')     | (63,)                        |
+| indices                        | dtype('int64')     | (63,)                        |
+| energyperatom                  | dtype('float32')   | (63,)                        |
+| split_indices                  | dtype('int64')     | (63,)                        |
+--------------------------------------------------------------------------------------
+Adding split indices for split: train
+Arrays for split: train
+--------------------------------------------------------------------------------------
+| Name                           | dtype              | shape                        |
+--------------------------------------------------------------------------------------
+| cell                           | dtype('float32')   | (573, 3, 3)                  |
+| coordinates                    | dtype('float32')   | (573, 249, 3)                |
+| energy                         | dtype('float32')   | (573,)                       |
+| fermi                          | dtype('float32')   | (573,)                       |
+| force                          | dtype('float32')   | (573, 249, 3)                |
+| species                        | dtype('int64')     | (573, 249)                   |
+| sys_number                     | dtype('int64')     | (573,)                       |
+| indices                        | dtype('int64')     | (573,)                       |
+| energyperatom                  | dtype('float32')   | (573,)                       |
+| split_indices                  | dtype('int64')     | (573,)                       |
+--------------------------------------------------------------------------------------
+Database: Splitting complete.
+Device was not specified. Attempting to default to device: cpu
+Computed E0 energies: tensor([-1.6808])
+/Users/andrewtrepagnier/Forks/hippynn-precision-typed/hippynn-precision-typed/hippynn/experiment/controllers.py:219: UserWarning: Parameter verbose no longer supported for schedulers. It will be ignored.
+  warnings.warn("Parameter verbose no longer supported for schedulers. It will be ignored.")
+Experiment Params:
+SetupParams(device=None, controller=<hippynn.experiment.controllers.PatienceController object at 0x12d6063c0>, stopping_key=None, optimizer=<class 'torch.optim.adam.Adam'>, learning_rate=None, scheduler=None, batch_size=None, eval_batch_size=None, max_epochs=None, fraction_train_eval=0.1)
+Device was not specified. Attempting to default to device: cpu
+Using device:  cpu
+Beginning training.
+Model:
+Inputs:
+	 I0 : CellNode('Cells(db_name='cell')')<0x12baf1400>
+	 I1 : PositionsNode('Positions(db_name='coordinates')')<0x12baf12b0>
+	 I2 : SpeciesNode('Species(db_name='species')')<0x12baf1160>
+Outputs:
+	 O0 : _LPReg('L^P_Reg(HIPNN,p=2)')<0x12d604590>
+	 O1 : PerAtom('T/Atom')<0x12d5c4e10>
+	 O2 : GradientNode('force')<0x12baf3230>
+	 O3 : IndexNode('HEnergy.mol_energy')<0x12bab1f10>
+	 O4 : PerAtom('RperAtom')<0x12baf2f90>
+Order:
+I2-------------------> H0  : OneHot
+H0-------------------> H1  : OneHot.encoding
+H0-------------------> H2  : OneHot.nonblank
+H2,H1----------------> H3  : PaddingIndexer
+H3-------------------> H5  : PaddingIndexer.indexed_features
+H3-------------------> H6  : PaddingIndexer.inv_real_atoms
+H3-------------------> H7  : PaddingIndexer.mol_index
+H3-------------------> H9  : PaddingIndexer.n_molecules
+H3-------------------> H10 : PaddingIndexer.real_atoms
+I1,I0,H2,H6,H10------> H11 : PairIndexer
+H11------------------> H15 : PairIndexer.pair_dist
+H11------------------> H16 : PairIndexer.pair_first
+H11------------------> H17 : PairIndexer.pair_second
+H16,H5,H17,H15-------> H18 : HIPNN
+H18,H7,H9------------> H19 : HEnergy
+H19------------------> H24 : HEnergy.hierarchicality
+H19------------------> O3  : HEnergy.mol_energy
+H18------------------> O0  : L^P_Reg(HIPNN,p=2)
+I2,H24---------------> O4  : RperAtom
+I2,O3----------------> O1  : T/Atom
+O3,I1----------------> O2  : force
+Model Params:
+cpu Fixed torch.int64 torch.Size([14]) moddict.node0.species_map
+cpu Learned torch.float32 torch.Size([20, 10, 1]) moddict.node18.blocks.0.0.base_layer.int_weights
+cpu Learned torch.float32 torch.Size([1, 20]) moddict.node18.blocks.0.0.base_layer.sensitivity.mu
+cpu Learned torch.float32 torch.Size([1, 20]) moddict.node18.blocks.0.0.base_layer.sensitivity.sigma
+cpu Learned torch.float32 torch.Size([10, 1]) moddict.node18.blocks.0.0.base_layer.selfint.weight
+cpu Learned torch.float32 torch.Size([10]) moddict.node18.blocks.0.0.base_layer.selfint.bias
+cpu Learned torch.float32 torch.Size([10, 10]) moddict.node18.blocks.0.0.res_layer.weight
+cpu Learned torch.float32 torch.Size([10]) moddict.node18.blocks.0.0.res_layer.bias
+cpu Learned torch.float32 torch.Size([10, 1]) moddict.node18.blocks.0.0.adjust_layer.weight
+cpu Learned torch.float32 torch.Size([10, 10]) moddict.node18.blocks.0.1.base_layer.weight
+cpu Learned torch.float32 torch.Size([10]) moddict.node18.blocks.0.1.base_layer.bias
+cpu Learned torch.float32 torch.Size([10, 10]) moddict.node18.blocks.0.1.res_layer.weight
+cpu Learned torch.float32 torch.Size([10]) moddict.node18.blocks.0.1.res_layer.bias
+cpu Learned torch.float32 torch.Size([10, 10]) moddict.node18.blocks.0.2.base_layer.weight
+cpu Learned torch.float32 torch.Size([10]) moddict.node18.blocks.0.2.base_layer.bias
+cpu Learned torch.float32 torch.Size([10, 10]) moddict.node18.blocks.0.2.res_layer.weight
+cpu Learned torch.float32 torch.Size([10]) moddict.node18.blocks.0.2.res_layer.bias
+cpu Learned torch.float32 torch.Size([10, 10]) moddict.node18.blocks.0.3.base_layer.weight
+cpu Learned torch.float32 torch.Size([10]) moddict.node18.blocks.0.3.base_layer.bias
+cpu Learned torch.float32 torch.Size([10, 10]) moddict.node18.blocks.0.3.res_layer.weight
+cpu Learned torch.float32 torch.Size([10]) moddict.node18.blocks.0.3.res_layer.bias
+cpu Fixed torch.float32 torch.Size([1, 1]) moddict.node19.layers.0.weight
+cpu Learned torch.float32 torch.Size([1, 10]) moddict.node19.layers.1.weight
+cpu Learned torch.float32 torch.Size([1]) moddict.node19.layers.1.bias
+Total Count: 1066
+At least 30 epochs will be run
+__________________________________________________
+Epoch 0:
+Learning rate:     0.001
+Batch Size: 16
+Training Batches:   0%|          | 0/36 [00:00<?, ?batch/s]/Users/andrewtrepagnier/miniconda3/lib/python3.13/site-packages/torch/utils/data/dataloader.py:684: UserWarning: 'pin_memory' argument is set as true but not supported on MPS now, then device pinned memory won't be used.
+  warnings.warn(warn_msg)
+Training Batches:  14%|#3        | 5/36 [00:01<00:06,  4.49batch/s]Training Batches:  31%|###       | 11/36 [00:02<00:05,  4.85batch/s]Training Batches:  44%|####4     | 16/36 [00:03<00:04,  4.69batch/s]Training Batches:  61%|######1   | 22/36 [00:04<00:02,  4.85batch/s]Training Batches:  75%|#######5  | 27/36 [00:05<00:01,  4.87batch/s]Training Batches:  92%|#########1| 33/36 [00:06<00:00,  5.02batch/s]                                                                    Training time:  7.31 s
+Validating...
+Evaluating train:   0%|          | 0/1 [00:00<?, ?batch/s]                                                          Making plots. Saved location: plots/epochs/epoch0/train
+Saving plot at plots/epochs/epoch0/train/Hist2D-energy.pdf
+Saving plot at plots/epochs/epoch0/train/Hist2D-energyperatom.pdf
+Saving plot at plots/epochs/epoch0/train/Hist2D-force.pdf
+Saving plot at plots/epochs/epoch0/train/sense_0.pdf
+Evaluating valid:   0%|          | 0/1 [00:00<?, ?batch/s]/Users/andrewtrepagnier/miniconda3/lib/python3.13/site-packages/torch/utils/data/dataloader.py:684: UserWarning: 'pin_memory' argument is set as true but not supported on MPS now, then device pinned memory won't be used.
+  warnings.warn(warn_msg)
+                                                          Making plots. Saved location: plots/epochs/epoch0/valid
+Saving plot at plots/epochs/epoch0/valid/Hist2D-energy.pdf
+Saving plot at plots/epochs/epoch0/valid/Hist2D-energyperatom.pdf
+Saving plot at plots/epochs/epoch0/valid/Hist2D-force.pdf
+Saving plot at plots/epochs/epoch0/valid/sense_0.pdf
+                    train         valid
+---------------------------------------
+TpA-RMSE :    *   0.71487   *   0.97317
+TpA-MAE  :    *   0.49322   *   0.73415
+TpA-RSQ  :    * -0.066507   *  -0.25285
+ForceRMSE:    *    2.5458   *    3.3454
+ForceMAE :    *    1.3351   *     1.876
+ForceRsq :    * 0.0071254   *-0.0022542
+T-Hier   :    *  0.025562   *   0.02384
+L2Reg    :    *    57.421   *    57.421
+Loss-Err :    *    124.69   *    175.95
+Loss-Reg :    *   0.02562   *  0.023897
+Loss     :    *    124.72   *    175.98
+Best Loss-Err so far:   175.95
+Epochs since last best: 0
+Current max epochs: 30
+Total epoch time:  12.6 s
+**** NEW BEST MODEL - Saving! ****
+__________________________________________________
+Epoch 1:
+Learning rate:     0.001
+Batch Size: 16
+Training Batches:   0%|          | 0/36 [00:00<?, ?batch/s]/Users/andrewtrepagnier/miniconda3/lib/python3.13/site-packages/torch/utils/data/dataloader.py:684: UserWarning: 'pin_memory' argument is set as true but not supported on MPS now, then device pinned memory won't be used.
+  warnings.warn(warn_msg)
+Training Batches:  14%|#3        | 5/36 [00:01<00:06,  4.83batch/s]Training Batches:  28%|##7       | 10/36 [00:02<00:05,  4.52batch/s]Training Batches:  42%|####1     | 15/36 [00:03<00:04,  4.70batch/s]Training Batches:  58%|#####8    | 21/36 [00:04<00:03,  4.88batch/s]Training Batches:  72%|#######2  | 26/36 [00:05<00:02,  4.91batch/s]Training Batches:  86%|########6 | 31/36 [00:06<00:01,  4.93batch/s]                                                                    Training time:  7.31 s
+Validating...
+Evaluating train:   0%|          | 0/1 [00:00<?, ?batch/s]                                                          Evaluating valid:   0%|          | 0/1 [00:00<?, ?batch/s]                                                                              train         valid
+---------------------------------------
+TpA-RMSE :    *   0.64281   *   0.72776
+TpA-MAE  :    *   0.34962   *   0.52512
+TpA-RSQ  :         0.4007       0.29936
+ForceRMSE:         2.7063        3.4622
+ForceMAE :         1.3858        1.9464
+ForceRsq :    * -0.081181   * -0.073464
+T-Hier   :       0.044108      0.038859
+L2Reg    :         59.007        59.007
+Loss-Err :    *    103.33   *     130.7
+Loss-Reg :       0.044167      0.038918
+Loss     :    *    103.38   *    130.74
+Best Loss-Err so far:    130.7
+Epochs since last best: 0
+Current max epochs: 30
+Total epoch time:  8.58 s
+**** NEW BEST MODEL - Saving! ****
+__________________________________________________
+Epoch 2:
+Learning rate:     0.001
+Batch Size: 16
+Training Batches:   0%|          | 0/36 [00:00<?, ?batch/s]Training Batches:  17%|#6        | 6/36 [00:01<00:05,  5.15batch/s]Training Batches:  33%|###3      | 12/36 [00:02<00:04,  4.93batch/s]Training Batches:  47%|####7     | 17/36 [00:03<00:03,  4.93batch/s]Training Batches:  61%|######1   | 22/36 [00:04<00:02,  4.95batch/s]Training Batches:  78%|#######7  | 28/36 [00:05<00:01,  5.00batch/s]Training Batches:  92%|#########1| 33/36 [00:06<00:00,  4.94batch/s]                                                                    Training time:  7.22 s
+Validating...
+Evaluating train:   0%|          | 0/1 [00:00<?, ?batch/s]                                                          Evaluating valid:   0%|          | 0/1 [00:00<?, ?batch/s]                                                                              train         valid
+---------------------------------------
+TpA-RMSE :    *   0.31005   *   0.28036
+TpA-MAE  :    *   0.23442   *   0.23068
+TpA-RSQ  :         0.8137       0.89602
+ForceRMSE:         2.7289        3.7832
+ForceMAE :         1.5707        2.2981
+ForceRsq :    *  -0.42297   *  -0.28177
+T-Hier   :        0.12315       0.15931
+L2Reg    :         60.521        60.521
+Loss-Err :    *    58.747   *    57.185
+Loss-Reg :        0.12321       0.15937
+Loss     :    *     58.87   *    57.345
+Best Loss-Err so far:   57.185
+Epochs since last best: 0
+Current max epochs: 30
+Total epoch time:  8.38 s
+**** NEW BEST MODEL - Saving! ****
+__________________________________________________
+Epoch 3:
+Learning rate:     0.001
+Batch Size: 16
+Training Batches:   0%|          | 0/36 [00:00<?, ?batch/s]Training Batches:  17%|#6        | 6/36 [00:01<00:06,  5.00batch/s]Training Batches:  33%|###3      | 12/36 [00:02<00:04,  5.05batch/s]Training Batches:  50%|#####     | 18/36 [00:03<00:03,  5.01batch/s]Training Batches:  67%|######6   | 24/36 [00:04<00:02,  4.86batch/s]Training Batches:  83%|########3 | 30/36 [00:06<00:01,  4.92batch/s]Training Batches:  97%|#########7| 35/36 [00:07<00:00,  4.89batch/s]                                                                    Training time:  7.27 s
+Validating...
+Evaluating train:   0%|          | 0/1 [00:00<?, ?batch/s]                                                          Evaluating valid:   0%|          | 0/1 [00:00<?, ?batch/s]                                                                              train         valid
+---------------------------------------
+TpA-RMSE :    *   0.12708   *   0.15745
+TpA-MAE  :    *   0.10422   *    0.1158
+TpA-RSQ  :        0.97411       0.96721
+ForceRMSE:         2.8426        3.6852
+ForceMAE :    *    1.2938        1.9815
+ForceRsq :       -0.24662      -0.21622
+T-Hier   :        0.13351       0.17627
+L2Reg    :          61.91         61.91
+Loss-Err :    *    27.266   *    32.991
+Loss-Reg :        0.13357       0.17633
+Loss     :    *      27.4   *    33.167
+Best Loss-Err so far:   32.991
+Epochs since last best: 0
+Current max epochs: 30
+Total epoch time:  8.44 s
+**** NEW BEST MODEL - Saving! ****
+__________________________________________________
+Epoch 4:
+Learning rate:     0.001
+Batch Size: 16
+Training Batches:   0%|          | 0/36 [00:00<?, ?batch/s]Training Batches:  17%|#6        | 6/36 [00:01<00:05,  5.23batch/s]Training Batches:  33%|###3      | 12/36 [00:02<00:04,  5.03batch/s]Training Batches:  50%|#####     | 18/36 [00:03<00:03,  4.90batch/s]Training Batches:  64%|######3   | 23/36 [00:04<00:02,  4.81batch/s]Training Batches:  81%|########  | 29/36 [00:05<00:01,  4.88batch/s]Training Batches:  94%|#########4| 34/36 [00:06<00:00,  4.88batch/s]                                                                    Training time:  7.28 s
+Validating...
+Evaluating train:   0%|          | 0/1 [00:00<?, ?batch/s]                                                          Evaluating valid:   0%|          | 0/1 [00:00<?, ?batch/s]                                                                              train         valid
+---------------------------------------
+TpA-RMSE :    *   0.12342   *   0.13611
+TpA-MAE  :    *  0.086964   *   0.10382
+TpA-RSQ  :        0.96532       0.97549
+ForceRMSE:         2.7356        4.0675
+ForceMAE :    *    1.0668        1.8865
+ForceRsq :    *  -0.43876   *  -0.48162
+T-Hier   :        0.10825       0.16905
+L2Reg    :         63.006        63.006
+Loss-Err :    *    24.841   *    29.947
+Loss-Reg :        0.10831       0.16911
+Loss     :    *    24.949   *    30.117
+Best Loss-Err so far:   29.947
+Epochs since last best: 0
+Current max epochs: 30
+Total epoch time:  8.35 s
+**** NEW BEST MODEL - Saving! ****
+__________________________________________________
+Epoch 5:
+Learning rate:     0.001
+Batch Size: 16
+Training Batches:   0%|          | 0/36 [00:00<?, ?batch/s]Training Batches:  14%|#3        | 5/36 [00:01<00:06,  4.96batch/s]Training Batches:  28%|##7       | 10/36 [00:02<00:05,  4.85batch/s]Training Batches:  42%|####1     | 15/36 [00:03<00:04,  4.90batch/s]Training Batches:  58%|#####8    | 21/36 [00:04<00:02,  5.04batch/s]Training Batches:  75%|#######5  | 27/36 [00:05<00:01,  5.00batch/s]Training Batches:  92%|#########1| 33/36 [00:06<00:00,  4.93batch/s]                                                                    Training time:  7.25 s
+Validating...
+Evaluating train:   0%|          | 0/1 [00:00<?, ?batch/s]                                                          Evaluating valid:   0%|          | 0/1 [00:00<?, ?batch/s]                                                                              train         valid
+---------------------------------------
+TpA-RMSE :        0.13109   *   0.11224
+TpA-MAE  :       0.094278   *  0.087642
+TpA-RSQ  :        0.97919       0.98333
+ForceRMSE:         3.6993        3.9316
+ForceMAE :         1.6227   *    1.8011
+ForceRsq :       -0.41084      -0.38428
+T-Hier   :         0.1526       0.17442
+L2Reg    :         63.314        63.314
+Loss-Err :         27.859   *    25.721
+Loss-Reg :        0.15266       0.17449
+Loss     :         28.011   *    25.895
+Best Loss-Err so far:   25.721
+Epochs since last best: 0
+Current max epochs: 30
+Total epoch time:  8.42 s
+**** NEW BEST MODEL - Saving! ****
+__________________________________________________
+Epoch 6:
+Learning rate:     0.001
+Batch Size: 16
+Training Batches:   0%|          | 0/36 [00:00<?, ?batch/s]Training Batches:  14%|#3        | 5/36 [00:01<00:06,  4.66batch/s]Training Batches:  28%|##7       | 10/36 [00:02<00:05,  4.71batch/s]Training Batches:  42%|####1     | 15/36 [00:03<00:04,  4.79batch/s]Training Batches:  58%|#####8    | 21/36 [00:04<00:03,  4.92batch/s]Training Batches:  75%|#######5  | 27/36 [00:05<00:01,  5.00batch/s]Training Batches:  89%|########8 | 32/36 [00:06<00:00,  4.97batch/s]                                                                    Training time:  7.28 s
+Validating...
+Evaluating train:   0%|          | 0/1 [00:00<?, ?batch/s]                                                          Evaluating valid:   0%|          | 0/1 [00:00<?, ?batch/s]                                                                              train         valid
+---------------------------------------
+TpA-RMSE :    *  0.073298   *  0.093417
+TpA-MAE  :    *  0.061637   *  0.065582
+TpA-RSQ  :        0.99385       0.98846
+ForceRMSE:         3.6695        3.7908
+ForceMAE :          1.592   *    1.7063
+ForceRsq :       -0.38784      -0.28692
+T-Hier   :         0.1666       0.18267
+L2Reg    :         63.761        63.761
+Loss-Err :    *    18.755   *    21.397
+Loss-Reg :        0.16667       0.18274
+Loss     :    *    18.922   *     21.58
+Best Loss-Err so far:   21.397
+Epochs since last best: 0
+Current max epochs: 30
+Total epoch time:  8.41 s
+**** NEW BEST MODEL - Saving! ****
+__________________________________________________
+Epoch 7:
+Learning rate:     0.001
+Batch Size: 16
+Training Batches:   0%|          | 0/36 [00:00<?, ?batch/s]Training Batches:  14%|#3        | 5/36 [00:01<00:06,  4.80batch/s]Training Batches:  31%|###       | 11/36 [00:02<00:05,  4.93batch/s]Training Batches:  44%|####4     | 16/36 [00:03<00:04,  4.84batch/s]Training Batches:  61%|######1   | 22/36 [00:04<00:02,  4.97batch/s]Training Batches:  78%|#######7  | 28/36 [00:05<00:01,  4.96batch/s]Training Batches:  92%|#########1| 33/36 [00:06<00:00,  4.95batch/s]                                                                    Training time:  7.32 s
+Validating...
+Evaluating train:   0%|          | 0/1 [00:00<?, ?batch/s]                                                          Evaluating valid:   0%|          | 0/1 [00:00<?, ?batch/s]                                                                              train         valid
+---------------------------------------
+TpA-RMSE :    *  0.059734   *  0.084369
+TpA-MAE  :    *   0.04898   *  0.055455
+TpA-RSQ  :        0.99602       0.99058
+ForceRMSE:         3.3383   *    3.3059
+ForceMAE :         1.3313   *     1.515
+ForceRsq :       -0.38851      0.021267
+T-Hier   :        0.15157        0.1855
+L2Reg    :         64.038        64.038
+Loss-Err :    *    15.541   *    18.803
+Loss-Reg :        0.15164       0.18556
+Loss     :    *    15.693   *    18.989
+Best Loss-Err so far:   18.803
+Epochs since last best: 0
+Current max epochs: 30
+Total epoch time:  8.48 s
+**** NEW BEST MODEL - Saving! ****
+__________________________________________________
+Epoch 8:
+Learning rate:     0.001
+Batch Size: 16
+Training Batches:   0%|          | 0/36 [00:00<?, ?batch/s]Training Batches:  14%|#3        | 5/36 [00:01<00:06,  4.81batch/s]Training Batches:  28%|##7       | 10/36 [00:02<00:05,  4.85batch/s]Training Batches:  42%|####1     | 15/36 [00:03<00:04,  4.90batch/s]Training Batches:  56%|#####5    | 20/36 [00:04<00:03,  4.77batch/s]Training Batches:  72%|#######2  | 26/36 [00:05<00:02,  4.87batch/s]Training Batches:  89%|########8 | 32/36 [00:06<00:00,  4.94batch/s]                                                                    Training time:  7.3 s
+Validating...
+Evaluating train:   0%|          | 0/1 [00:00<?, ?batch/s]                                                          Evaluating valid:   0%|          | 0/1 [00:00<?, ?batch/s]                                                                              train         valid
+---------------------------------------
+TpA-RMSE :        0.11637      0.086569
+TpA-MAE  :         0.0748      0.065472
+TpA-RSQ  :        0.97953       0.99009
+ForceRMSE:    *     2.165   *    2.8498
+ForceMAE :    *    1.0035   *    1.3149
+ForceRsq :        0.30968       0.27267
+T-Hier   :        0.12826       0.17743
+L2Reg    :         64.271        64.271
+Loss-Err :         22.286        19.369
+Loss-Reg :        0.12832        0.1775
+Loss     :         22.414        19.546
+Best Loss-Err so far:   18.803
+Epochs since last best: 1
+Current max epochs: 30
+Total epoch time:  8.45 s
+__________________________________________________
+Epoch 9:
+Learning rate:     0.001
+Batch Size: 16
+Training Batches:   0%|          | 0/36 [00:00<?, ?batch/s]Training Batches:  14%|#3        | 5/36 [00:01<00:06,  4.73batch/s]Training Batches:  28%|##7       | 10/36 [00:02<00:05,  4.87batch/s]Training Batches:  44%|####4     | 16/36 [00:03<00:03,  5.01batch/s]Training Batches:  61%|######1   | 22/36 [00:04<00:02,  5.00batch/s]Training Batches:  75%|#######5  | 27/36 [00:05<00:01,  4.87batch/s]Training Batches:  89%|########8 | 32/36 [00:06<00:00,  4.88batch/s]                                                                    Training time:  7.26 s
+Validating...
+Evaluating train:   0%|          | 0/1 [00:00<?, ?batch/s]                                                          Evaluating valid:   0%|          | 0/1 [00:00<?, ?batch/s]                                                                              train         valid
+---------------------------------------
+TpA-RMSE :       0.094755   *  0.073376
+TpA-MAE  :       0.059036   *  0.047417
+TpA-RSQ  :         0.9859       0.99288
+ForceRMSE:         2.2447   *    2.6402
+ForceMAE :          1.018   *    1.2075
+ForceRsq :        0.38828       0.37574
+T-Hier   :        0.15774       0.18988
+L2Reg    :         64.599        64.599
+Loss-Err :         18.642   *    15.927
+Loss-Reg :         0.1578       0.18994
+Loss     :           18.8   *    16.117
+Best Loss-Err so far:   15.927
+Patience for training restored.
+Epochs since last best: 0
+Current max epochs: 30
+Total epoch time:  8.37 s
+**** NEW BEST MODEL - Saving! ****
+__________________________________________________
+Epoch 10:
+Learning rate:     0.001
+Batch Size: 16
+Training Batches:   0%|          | 0/36 [00:00<?, ?batch/s]Training Batches:  17%|#6        | 6/36 [00:01<00:05,  5.01batch/s]Training Batches:  33%|###3      | 12/36 [00:02<00:04,  4.94batch/s]Training Batches:  50%|#####     | 18/36 [00:03<00:03,  4.90batch/s]Training Batches:  64%|######3   | 23/36 [00:04<00:02,  4.86batch/s]Training Batches:  78%|#######7  | 28/36 [00:05<00:01,  4.86batch/s]Training Batches:  94%|#########4| 34/36 [00:06<00:00,  4.98batch/s]                                                                    Training time:  7.27 s
+Validating...
+Evaluating train:   0%|          | 0/1 [00:00<?, ?batch/s]                                                          Evaluating valid:   0%|          | 0/1 [00:00<?, ?batch/s]                                                                              train         valid
+---------------------------------------
+TpA-RMSE :       0.095705      0.079775
+TpA-MAE  :       0.073204      0.061836
+TpA-RSQ  :        0.98276       0.99158
+ForceRMSE:    *    1.4091   *    2.2685
+ForceMAE :    *   0.69634   *    1.0705
+ForceRsq :        0.62144       0.53917
+T-Hier   :        0.11393       0.18168
+L2Reg    :         64.667        64.667
+Loss-Err :         18.996          17.5
+Loss-Reg :          0.114       0.18175
+Loss     :          19.11        17.682
+Best Loss-Err so far:   15.927
+Epochs since last best: 1
+Current max epochs: 30
+Total epoch time:  8.39 s
+__________________________________________________
+Epoch 11:
+Learning rate:     0.001
+Batch Size: 16
+Training Batches:   0%|          | 0/36 [00:00<?, ?batch/s]Training Batches:  14%|#3        | 5/36 [00:01<00:06,  4.87batch/s]Training Batches:  28%|##7       | 10/36 [00:02<00:05,  4.79batch/s]Training Batches:  42%|####1     | 15/36 [00:03<00:04,  4.78batch/s]Training Batches:  58%|#####8    | 21/36 [00:04<00:03,  4.92batch/s]Training Batches:  75%|#######5  | 27/36 [00:05<00:01,  4.97batch/s]Training Batches:  89%|########8 | 32/36 [00:06<00:00,  4.91batch/s]                                                                    Training time:  7.27 s
+Validating...
+Evaluating train:   0%|          | 0/1 [00:00<?, ?batch/s]                                                          Evaluating valid:   0%|          | 0/1 [00:00<?, ?batch/s]                                                                              train         valid
+---------------------------------------
+TpA-RMSE :    *  0.058625   *  0.072076
+TpA-MAE  :    *    0.0425      0.050713
+TpA-RSQ  :        0.99136       0.99313
+ForceRMSE:    *    1.3475   *     2.119
+ForceMAE :    *   0.63808   *   0.99913
+ForceRsq :        0.63398       0.59788
+T-Hier   :        0.12266       0.18796
+L2Reg    :         65.016        65.016
+Loss-Err :    *    12.098   *    15.397
+Loss-Reg :        0.12272       0.18803
+Loss     :    *    12.221   *    15.585
+Best Loss-Err so far:   15.397
+Patience for training restored.
+Epochs since last best: 0
+Current max epochs: 30
+Total epoch time:  8.37 s
+**** NEW BEST MODEL - Saving! ****
+__________________________________________________
+Epoch 12:
+Learning rate:     0.001
+Batch Size: 16
+Training Batches:   0%|          | 0/36 [00:00<?, ?batch/s]Training Batches:  17%|#6        | 6/36 [00:01<00:06,  4.92batch/s]Training Batches:  33%|###3      | 12/36 [00:02<00:04,  4.84batch/s]Training Batches:  47%|####7     | 17/36 [00:03<00:03,  4.86batch/s]Training Batches:  61%|######1   | 22/36 [00:04<00:02,  4.91batch/s]Training Batches:  75%|#######5  | 27/36 [00:05<00:01,  4.93batch/s]Training Batches:  92%|#########1| 33/36 [00:06<00:00,  4.99batch/s]                                                                    Training time:  7.32 s
+Validating...
+Evaluating train:   0%|          | 0/1 [00:00<?, ?batch/s]                                                          Evaluating valid:   0%|          | 0/1 [00:00<?, ?batch/s]                                                                              train         valid
+---------------------------------------
+TpA-RMSE :    *  0.057264   *  0.059401
+TpA-MAE  :    *  0.041855   *  0.037773
+TpA-RSQ  :        0.99388       0.99533
+ForceRMSE:    *    1.3418   *    1.9158
+ForceMAE :    *   0.58719   *   0.93006
+ForceRsq :        0.63767       0.67131
+T-Hier   :        0.12988       0.18759
+L2Reg    :         65.081        65.081
+Loss-Err :    *    11.841   *    12.563
+Loss-Reg :        0.12994       0.18766
+Loss     :    *    11.971   *    12.751
+Best Loss-Err so far:   12.563
+Epochs since last best: 0
+Current max epochs: 30
+Total epoch time:  8.43 s
+**** NEW BEST MODEL - Saving! ****
+__________________________________________________
+Epoch 13:
+Learning rate:     0.001
+Batch Size: 16
+Training Batches:   0%|          | 0/36 [00:00<?, ?batch/s]Training Batches:  14%|#3        | 5/36 [00:01<00:06,  4.71batch/s]Training Batches:  28%|##7       | 10/36 [00:02<00:05,  4.80batch/s]Training Batches:  42%|####1     | 15/36 [00:03<00:04,  4.65batch/s]Training Batches:  56%|#####5    | 20/36 [00:04<00:03,  4.69batch/s]Training Batches:  69%|######9   | 25/36 [00:05<00:02,  4.73batch/s]Training Batches:  86%|########6 | 31/36 [00:06<00:01,  4.89batch/s]                                                                    Training time:  7.37 s
+Validating...
+Evaluating train:   0%|          | 0/1 [00:00<?, ?batch/s]                                                          Evaluating valid:   0%|          | 0/1 [00:00<?, ?batch/s]                                                                              train         valid
+---------------------------------------
+TpA-RMSE :       0.064194      0.060184
+TpA-MAE  :       0.047679      0.043559
+TpA-RSQ  :        0.99382       0.99521
+ForceRMSE:         1.5536   *    1.8714
+ForceMAE :        0.75927   *    0.8986
+ForceRsq :        0.69339       0.68637
+T-Hier   :        0.15218        0.1869
+L2Reg    :         65.302        65.302
+Loss-Err :           13.5        13.144
+Loss-Reg :        0.15224       0.18697
+Loss     :         13.652        13.331
+Best Loss-Err so far:   12.563
+Epochs since last best: 1
+Current max epochs: 30
+Total epoch time:  8.5 s
+__________________________________________________
+Epoch 14:
+Learning rate:     0.001
+Batch Size: 16
+Training Batches:   0%|          | 0/36 [00:00<?, ?batch/s]Training Batches:  17%|#6        | 6/36 [00:01<00:06,  4.85batch/s]Training Batches:  31%|###       | 11/36 [00:02<00:05,  4.92batch/s]Training Batches:  47%|####7     | 17/36 [00:03<00:03,  4.94batch/s]Training Batches:  64%|######3   | 23/36 [00:04<00:02,  4.90batch/s]Training Batches:  78%|#######7  | 28/36 [00:05<00:01,  4.89batch/s]Training Batches:  92%|#########1| 33/36 [00:06<00:00,  4.88batch/s]                                                                    Training time:  7.29 s
+Validating...
+Evaluating train:   0%|          | 0/1 [00:00<?, ?batch/s]                                                          Evaluating valid:   0%|          | 0/1 [00:00<?, ?batch/s]                                                                              train         valid
+---------------------------------------
+TpA-RMSE :    *  0.055983   *  0.057443
+TpA-MAE  :    *  0.039695      0.038761
+TpA-RSQ  :        0.99135       0.99563
+ForceRMSE:    *    1.0311   *    1.7076
+ForceMAE :    *   0.49433   *   0.86289
+ForceRsq :        0.72687       0.73887
+T-Hier   :        0.12499       0.18889
+L2Reg    :         65.423        65.423
+Loss-Err :    *    11.093   *    12.191
+Loss-Reg :        0.12506       0.18896
+Loss     :    *    11.218   *     12.38
+Best Loss-Err so far:   12.191
+Patience for training restored.
+Epochs since last best: 0
+Current max epochs: 30
+Total epoch time:  8.39 s
+**** NEW BEST MODEL - Saving! ****
+__________________________________________________
+Epoch 15:
+Learning rate:     0.001
+Batch Size: 16
+Training Batches:   0%|          | 0/36 [00:00<?, ?batch/s]Training Batches:  14%|#3        | 5/36 [00:01<00:06,  4.51batch/s]Training Batches:  28%|##7       | 10/36 [00:02<00:05,  4.73batch/s]Training Batches:  44%|####4     | 16/36 [00:03<00:04,  4.89batch/s]Training Batches:  58%|#####8    | 21/36 [00:04<00:03,  4.77batch/s]Training Batches:  75%|#######5  | 27/36 [00:05<00:01,  4.88batch/s]Training Batches:  92%|#########1| 33/36 [00:06<00:00,  4.98batch/s]                                                                    Training time:  7.3 s
+Validating...
+Evaluating train:   0%|          | 0/1 [00:00<?, ?batch/s]                                                          Evaluating valid:   0%|          | 0/1 [00:00<?, ?batch/s]                                                                              train         valid
+---------------------------------------
+TpA-RMSE :       0.058328      0.064568
+TpA-MAE  :       0.049296      0.053892
+TpA-RSQ  :        0.99296       0.99448
+ForceRMSE:         1.2884   *    1.6228
+ForceMAE :        0.61121   *   0.82704
+ForceRsq :        0.72169       0.76417
+T-Hier   :        0.12025       0.17686
+L2Reg    :         65.569        65.569
+Loss-Err :         12.662        14.296
+Loss-Reg :        0.12032       0.17693
+Loss     :         12.782        14.473
+Best Loss-Err so far:   12.191
+Epochs since last best: 1
+Current max epochs: 30
+Total epoch time:  8.4 s
+__________________________________________________
+Epoch 16:
+Learning rate:     0.001
+Batch Size: 16
+Training Batches:   0%|          | 0/36 [00:00<?, ?batch/s]Training Batches:  17%|#6        | 6/36 [00:01<00:06,  4.96batch/s]Training Batches:  31%|###       | 11/36 [00:02<00:05,  4.88batch/s]Training Batches:  44%|####4     | 16/36 [00:03<00:04,  4.87batch/s]Training Batches:  61%|######1   | 22/36 [00:04<00:02,  4.99batch/s]Training Batches:  75%|#######5  | 27/36 [00:05<00:01,  4.97batch/s]Training Batches:  92%|#########1| 33/36 [00:06<00:00,  4.97batch/s]                                                                    Training time:  7.23 s
+Validating...
+Evaluating train:   0%|          | 0/1 [00:00<?, ?batch/s]                                                          Evaluating valid:   0%|          | 0/1 [00:00<?, ?batch/s]                                                                              train         valid
+---------------------------------------
+TpA-RMSE :       0.060484   *  0.056009
+TpA-MAE  :       0.040421      0.037852
+TpA-RSQ  :        0.98939       0.99585
+ForceRMSE:         1.1902   *    1.6054
+ForceMAE :         0.6039   *   0.82041
+ForceRsq :        0.67752        0.7692
+T-Hier   :        0.11102       0.18597
+L2Reg    :         65.797        65.797
+Loss-Err :         11.885   *    11.812
+Loss-Reg :        0.11109       0.18604
+Loss     :         11.996   *    11.998
+Best Loss-Err so far:   11.812
+Patience for training restored.
+Epochs since last best: 0
+Current max epochs: 30
+Total epoch time:  8.36 s
+**** NEW BEST MODEL - Saving! ****
+__________________________________________________
+Epoch 17:
+Learning rate:     0.001
+Batch Size: 16
+Training Batches:   0%|          | 0/36 [00:00<?, ?batch/s]Training Batches:  14%|#3        | 5/36 [00:01<00:06,  4.74batch/s]Training Batches:  28%|##7       | 10/36 [00:02<00:05,  4.78batch/s]Training Batches:  42%|####1     | 15/36 [00:03<00:04,  4.72batch/s]Training Batches:  56%|#####5    | 20/36 [00:04<00:03,  4.82batch/s]Training Batches:  69%|######9   | 25/36 [00:05<00:02,  4.77batch/s]Training Batches:  86%|########6 | 31/36 [00:06<00:01,  4.95batch/s]                                                                    Training time:  7.35 s
+Validating...
+Evaluating train:   0%|          | 0/1 [00:00<?, ?batch/s]                                                          Evaluating valid:   0%|          | 0/1 [00:00<?, ?batch/s]                                                                              train         valid
+---------------------------------------
+TpA-RMSE :       0.077637   *  0.046836
+TpA-MAE  :       0.044065   *   0.03081
+TpA-RSQ  :        0.99153        0.9971
+ForceRMSE:         1.4408   *    1.5777
+ForceMAE :        0.76741   *   0.81268
+ForceRsq :        0.77391       0.77709
+T-Hier   :         0.1759       0.19119
+L2Reg    :         65.998        65.998
+Loss-Err :         14.378   *    10.155
+Loss-Reg :        0.17596       0.19126
+Loss     :         14.554   *    10.346
+Best Loss-Err so far:   10.155
+Epochs since last best: 0
+Current max epochs: 30
+Total epoch time:  8.47 s
+**** NEW BEST MODEL - Saving! ****
+__________________________________________________
+Epoch 18:
+Learning rate:     0.001
+Batch Size: 16
+Training Batches:   0%|          | 0/36 [00:00<?, ?batch/s]Training Batches:  14%|#3        | 5/36 [00:01<00:06,  4.58batch/s]Training Batches:  28%|##7       | 10/36 [00:02<00:05,  4.76batch/s]Training Batches:  42%|####1     | 15/36 [00:03<00:04,  4.76batch/s]Training Batches:  58%|#####8    | 21/36 [00:04<00:03,  4.83batch/s]Training Batches:  75%|#######5  | 27/36 [00:05<00:01,  4.86batch/s]Training Batches:  92%|#########1| 33/36 [00:06<00:00,  4.98batch/s]                                                                    Training time:  7.31 s
+Validating...
+Evaluating train:   0%|          | 0/1 [00:00<?, ?batch/s]                                                          Evaluating valid:   0%|          | 0/1 [00:00<?, ?batch/s]                                                                              train         valid
+---------------------------------------
+TpA-RMSE :        0.05861      0.050336
+TpA-MAE  :    *  0.037086      0.039794
+TpA-RSQ  :        0.99564       0.99665
+ForceRMSE:         1.5147   *    1.5309
+ForceMAE :        0.79139   *   0.80063
+ForceRsq :        0.75552       0.79013
+T-Hier   :        0.16489       0.18726
+L2Reg    :         66.137        66.137
+Loss-Err :         11.876        11.345
+Loss-Reg :        0.16496       0.18732
+Loss     :         12.041        11.532
+Best Loss-Err so far:   10.155
+Epochs since last best: 1
+Current max epochs: 30
+Total epoch time:  8.45 s
+__________________________________________________
+Epoch 19:
+Learning rate:     0.001
+Batch Size: 16
+Training Batches:   0%|          | 0/36 [00:00<?, ?batch/s]Training Batches:  17%|#6        | 6/36 [00:01<00:05,  5.07batch/s]Training Batches:  33%|###3      | 12/36 [00:02<00:05,  4.79batch/s]Training Batches:  47%|####7     | 17/36 [00:03<00:04,  4.65batch/s]Training Batches:  61%|######1   | 22/36 [00:04<00:02,  4.71batch/s]Training Batches:  78%|#######7  | 28/36 [00:05<00:01,  4.79batch/s]Training Batches:  94%|#########4| 34/36 [00:07<00:00,  4.94batch/s]                                                                    Training time:  7.36 s
+Validating...
+Evaluating train:   0%|          | 0/1 [00:00<?, ?batch/s]                                                          Evaluating valid:   0%|          | 0/1 [00:00<?, ?batch/s]                                                                              train         valid
+---------------------------------------
+TpA-RMSE :        0.08567      0.058241
+TpA-MAE  :         0.0685       0.04901
+TpA-RSQ  :        0.99139       0.99551
+ForceRMSE:         1.2548   *    1.4761
+ForceMAE :        0.67942   *   0.78548
+ForceRsq :        0.81165       0.80488
+T-Hier   :        0.15391       0.18277
+L2Reg    :         66.227        66.227
+Loss-Err :         17.351        12.987
+Loss-Reg :        0.15397       0.18283
+Loss     :         17.505         13.17
+Best Loss-Err so far:   10.155
+Epochs since last best: 2
+Current max epochs: 30
+Total epoch time:  8.54 s
+__________________________________________________
+Epoch 20:
+Learning rate:     0.001
+Batch Size: 16
+Training Batches:   0%|          | 0/36 [00:00<?, ?batch/s]Training Batches:  17%|#6        | 6/36 [00:01<00:05,  5.27batch/s]Training Batches:  33%|###3      | 12/36 [00:02<00:04,  4.99batch/s]Training Batches:  50%|#####     | 18/36 [00:03<00:03,  4.92batch/s]Training Batches:  64%|######3   | 23/36 [00:04<00:02,  4.92batch/s]Training Batches:  78%|#######7  | 28/36 [00:05<00:01,  4.87batch/s]Training Batches:  92%|#########1| 33/36 [00:06<00:00,  4.82batch/s]                                                                    Training time:  7.34 s
+Validating...
+Evaluating train:   0%|          | 0/1 [00:00<?, ?batch/s]                                                          Making plots. Saved location: plots/epochs/epoch20/train
+Saving plot at plots/epochs/epoch20/train/Hist2D-energy.pdf
+Saving plot at plots/epochs/epoch20/train/Hist2D-energyperatom.pdf
+Saving plot at plots/epochs/epoch20/train/Hist2D-force.pdf
+Saving plot at plots/epochs/epoch20/train/sense_0.pdf
+Evaluating valid:   0%|          | 0/1 [00:00<?, ?batch/s]/Users/andrewtrepagnier/miniconda3/lib/python3.13/site-packages/torch/utils/data/dataloader.py:684: UserWarning: 'pin_memory' argument is set as true but not supported on MPS now, then device pinned memory won't be used.
+  warnings.warn(warn_msg)
+                                                          Making plots. Saved location: plots/epochs/epoch20/valid
+Saving plot at plots/epochs/epoch20/valid/Hist2D-energy.pdf
+Saving plot at plots/epochs/epoch20/valid/Hist2D-energyperatom.pdf
+Saving plot at plots/epochs/epoch20/valid/Hist2D-force.pdf
+Saving plot at plots/epochs/epoch20/valid/sense_0.pdf
+                    train         valid
+---------------------------------------
+TpA-RMSE :       0.064954      0.052684
+TpA-MAE  :    *  0.036983      0.035273
+TpA-RSQ  :        0.99279       0.99633
+ForceRMSE:          1.239        1.5085
+ForceMAE :        0.64999       0.79426
+ForceRsq :        0.76891       0.79621
+T-Hier   :        0.15041       0.19609
+L2Reg    :         66.581        66.581
+Loss-Err :         12.083        11.098
+Loss-Reg :        0.15048       0.19616
+Loss     :         12.233        11.295
+Best Loss-Err so far:   10.155
+Epochs since last best: 3
+Current max epochs: 30
+Total epoch time:  12.2 s
+__________________________________________________
+Epoch 21:
+Learning rate:     0.001
+Batch Size: 16
+Training Batches:   0%|          | 0/36 [00:00<?, ?batch/s]/Users/andrewtrepagnier/miniconda3/lib/python3.13/site-packages/torch/utils/data/dataloader.py:684: UserWarning: 'pin_memory' argument is set as true but not supported on MPS now, then device pinned memory won't be used.
+  warnings.warn(warn_msg)
+Training Batches:  17%|#6        | 6/36 [00:01<00:06,  4.95batch/s]Training Batches:  31%|###       | 11/36 [00:02<00:05,  4.66batch/s]Training Batches:  44%|####4     | 16/36 [00:03<00:04,  4.73batch/s]Training Batches:  61%|######1   | 22/36 [00:04<00:02,  4.93batch/s]Training Batches:  75%|#######5  | 27/36 [00:05<00:01,  4.94batch/s]Training Batches:  89%|########8 | 32/36 [00:06<00:00,  4.93batch/s]                                                                    Training time:  7.32 s
+Validating...
+Evaluating train:   0%|          | 0/1 [00:00<?, ?batch/s]                                                          Evaluating valid:   0%|          | 0/1 [00:00<?, ?batch/s]                                                                              train         valid
+---------------------------------------
+TpA-RMSE :    *  0.050082   *  0.042554
+TpA-MAE  :    *  0.033219   *  0.029207
+TpA-RSQ  :        0.99725        0.9976
+ForceRMSE:         1.4812   *    1.4736
+ForceMAE :        0.78686   *   0.77661
+ForceRsq :        0.78278       0.80553
+T-Hier   :        0.18388       0.19095
+L2Reg    :         66.733        66.733
+Loss-Err :    *    10.598   *    9.4263
+Loss-Reg :        0.18395       0.19102
+Loss     :    *    10.782   *    9.6173
+Best Loss-Err so far:   9.4263
+Patience for training restored.
+Epochs since last best: 0
+Current max epochs: 30
+Total epoch time:  8.51 s
+**** NEW BEST MODEL - Saving! ****
+__________________________________________________
+Epoch 22:
+Learning rate:     0.001
+Batch Size: 16
+Training Batches:   0%|          | 0/36 [00:00<?, ?batch/s]Training Batches:  14%|#3        | 5/36 [00:01<00:06,  4.80batch/s]Training Batches:  31%|###       | 11/36 [00:02<00:04,  5.02batch/s]Training Batches:  47%|####7     | 17/36 [00:03<00:03,  4.88batch/s]Training Batches:  61%|######1   | 22/36 [00:04<00:02,  4.92batch/s]Training Batches:  75%|#######5  | 27/36 [00:05<00:01,  4.90batch/s]Training Batches:  92%|#########1| 33/36 [00:06<00:00,  4.96batch/s]                                                                    Training time:  7.24 s
+Validating...
+Evaluating train:   0%|          | 0/1 [00:00<?, ?batch/s]                                                          Evaluating valid:   0%|          | 0/1 [00:00<?, ?batch/s]                                                                              train         valid
+---------------------------------------
+TpA-RMSE :    *  0.040038   *  0.042111
+TpA-MAE  :    *   0.02969   *  0.028378
+TpA-RSQ  :        0.99702       0.99765
+ForceRMSE:         1.0728   *    1.4618
+ForceMAE :        0.58873       0.77998
+ForceRsq :         0.7956       0.80863
+T-Hier   :        0.12674       0.18929
+L2Reg    :         66.916        66.916
+Loss-Err :    *    8.6344   *    9.2906
+Loss-Reg :        0.12681       0.18936
+Loss     :    *    8.7612   *      9.48
+Best Loss-Err so far:   9.2906
+Epochs since last best: 0
+Current max epochs: 30
+Total epoch time:  8.34 s
+**** NEW BEST MODEL - Saving! ****
+__________________________________________________
+Epoch 23:
+Learning rate:     0.001
+Batch Size: 16
+Training Batches:   0%|          | 0/36 [00:00<?, ?batch/s]Training Batches:  14%|#3        | 5/36 [00:01<00:06,  4.96batch/s]Training Batches:  28%|##7       | 10/36 [00:02<00:05,  4.89batch/s]Training Batches:  44%|####4     | 16/36 [00:03<00:04,  4.97batch/s]Training Batches:  58%|#####8    | 21/36 [00:04<00:03,  4.77batch/s]Training Batches:  72%|#######2  | 26/36 [00:05<00:02,  4.49batch/s]Training Batches:  89%|########8 | 32/36 [00:06<00:00,  4.64batch/s]                                                                    Training time:  7.55 s
+Validating...
+Evaluating train:   0%|          | 0/1 [00:00<?, ?batch/s]                                                          Evaluating valid:   0%|          | 0/1 [00:00<?, ?batch/s]                                                                              train         valid
+---------------------------------------
+TpA-RMSE :       0.045807      0.052835
+TpA-MAE  :       0.040244      0.041827
+TpA-RSQ  :        0.99731       0.99631
+ForceRMSE:         1.1745   *    1.4404
+ForceMAE :        0.63199   *   0.76544
+ForceRsq :        0.79888       0.81419
+T-Hier   :        0.14082       0.18885
+L2Reg    :         67.079        67.079
+Loss-Err :         10.412        11.672
+Loss-Reg :        0.14088       0.18892
+Loss     :         10.553        11.861
+Best Loss-Err so far:   9.2906
+Epochs since last best: 1
+Current max epochs: 30
+Total epoch time:  8.83 s
+__________________________________________________
+Epoch 24:
+Learning rate:     0.001
+Batch Size: 16
+Training Batches:   0%|          | 0/36 [00:00<?, ?batch/s]Training Batches:  14%|#3        | 5/36 [00:01<00:06,  4.72batch/s]Training Batches:  28%|##7       | 10/36 [00:02<00:05,  4.77batch/s]Training Batches:  42%|####1     | 15/36 [00:03<00:04,  4.47batch/s]Training Batches:  56%|#####5    | 20/36 [00:04<00:03,  4.55batch/s]Training Batches:  69%|######9   | 25/36 [00:05<00:02,  4.69batch/s]Training Batches:  83%|########3 | 30/36 [00:06<00:01,  4.68batch/s]Training Batches:  97%|#########7| 35/36 [00:07<00:00,  4.64batch/s]                                                                    Training time:  7.69 s
+Validating...
+Evaluating train:   0%|          | 0/1 [00:00<?, ?batch/s]                                                          Evaluating valid:   0%|          | 0/1 [00:00<?, ?batch/s]                                                                              train         valid
+---------------------------------------
+TpA-RMSE :       0.066628       0.07221
+TpA-MAE  :       0.057042      0.062969
+TpA-RSQ  :        0.99231        0.9931
+ForceRMSE:         1.1016   *    1.4219
+ForceMAE :        0.57231       0.77502
+ForceRsq :        0.80298       0.81893
+T-Hier   :        0.14921       0.19084
+L2Reg    :         67.255        67.255
+Loss-Err :         14.041        15.715
+Loss-Reg :        0.14928       0.19091
+Loss     :          14.19        15.906
+Best Loss-Err so far:   9.2906
+Epochs since last best: 2
+Current max epochs: 30
+Total epoch time:  8.79 s
+__________________________________________________
+Epoch 25:
+Learning rate:     0.001
+Batch Size: 16
+Training Batches:   0%|          | 0/36 [00:00<?, ?batch/s]Training Batches:  14%|#3        | 5/36 [00:01<00:06,  4.64batch/s]Training Batches:  28%|##7       | 10/36 [00:02<00:05,  4.83batch/s]Training Batches:  42%|####1     | 15/36 [00:03<00:04,  4.90batch/s]Training Batches:  56%|#####5    | 20/36 [00:04<00:03,  4.89batch/s]Training Batches:  72%|#######2  | 26/36 [00:05<00:02,  4.94batch/s]Training Batches:  89%|########8 | 32/36 [00:06<00:00,  5.07batch/s]                                                                    Training time:  7.24 s
+Validating...
+Evaluating train:   0%|          | 0/1 [00:00<?, ?batch/s]                                                          Evaluating valid:   0%|          | 0/1 [00:00<?, ?batch/s]                                                                              train         valid
+---------------------------------------
+TpA-RMSE :       0.047493      0.047477
+TpA-MAE  :       0.035546      0.034943
+TpA-RSQ  :        0.99675       0.99702
+ForceRMSE:         1.1768        1.4397
+ForceMAE :        0.63115       0.78216
+ForceRsq :        0.80967       0.81437
+T-Hier   :        0.14742       0.18982
+L2Reg    :          67.44         67.44
+Loss-Err :         10.112        10.464
+Loss-Reg :        0.14749       0.18988
+Loss     :         10.259        10.654
+Best Loss-Err so far:   9.2906
+Epochs since last best: 3
+Current max epochs: 30
+Total epoch time:  8.49 s
+__________________________________________________
+Epoch 26:
+Learning rate:     0.001
+Batch Size: 16
+Training Batches:   0%|          | 0/36 [00:00<?, ?batch/s]Training Batches:  14%|#3        | 5/36 [00:01<00:06,  4.74batch/s]Training Batches:  31%|###       | 11/36 [00:02<00:04,  5.09batch/s]Training Batches:  47%|####7     | 17/36 [00:03<00:03,  5.09batch/s]Training Batches:  64%|######3   | 23/36 [00:04<00:02,  4.99batch/s]Training Batches:  78%|#######7  | 28/36 [00:05<00:01,  4.94batch/s]Training Batches:  92%|#########1| 33/36 [00:06<00:00,  4.85batch/s]                                                                    Training time:  7.29 s
+Validating...
+Evaluating train:   0%|          | 0/1 [00:00<?, ?batch/s]                                                          Evaluating valid:   0%|          | 0/1 [00:00<?, ?batch/s]                                                                              train         valid
+---------------------------------------
+TpA-RMSE :       0.074545      0.046771
+TpA-MAE  :       0.048202      0.036555
+TpA-RSQ  :        0.98934       0.99711
+ForceRMSE:         1.0902   *    1.4197
+ForceMAE :        0.59416   *   0.75966
+ForceRsq :        0.81279       0.81951
+T-Hier   :        0.13283       0.18813
+L2Reg    :         67.602        67.602
+Loss-Err :         13.959        10.512
+Loss-Reg :         0.1329        0.1882
+Loss     :         14.092          10.7
+Best Loss-Err so far:   9.2906
+Epochs since last best: 4
+Current max epochs: 30
+Total epoch time:  8.41 s
+__________________________________________________
+Epoch 27:
+Learning rate:     0.001
+Batch Size: 16
+Training Batches:   0%|          | 0/36 [00:00<?, ?batch/s]Training Batches:  14%|#3        | 5/36 [00:01<00:06,  4.62batch/s]Training Batches:  28%|##7       | 10/36 [00:02<00:05,  4.65batch/s]Training Batches:  44%|####4     | 16/36 [00:03<00:04,  4.86batch/s]Training Batches:  61%|######1   | 22/36 [00:04<00:02,  4.96batch/s]Training Batches:  78%|#######7  | 28/36 [00:05<00:01,  4.99batch/s]Training Batches:  94%|#########4| 34/36 [00:06<00:00,  5.01batch/s]                                                                    Training time:  7.28 s
+Validating...
+Evaluating train:   0%|          | 0/1 [00:00<?, ?batch/s]                                                          Evaluating valid:   0%|          | 0/1 [00:00<?, ?batch/s]                                                                              train         valid
+---------------------------------------
+TpA-RMSE :       0.055809      0.070604
+TpA-MAE  :       0.039916      0.050043
+TpA-RSQ  :        0.99529       0.99341
+ForceRMSE:          1.217        1.4313
+ForceMAE :        0.65848   *   0.75929
+ForceRsq :        0.81585       0.81654
+T-Hier   :        0.16315       0.19672
+L2Reg    :         67.869        67.869
+Loss-Err :         11.448        14.255
+Loss-Reg :        0.16322       0.19678
+Loss     :         11.611        14.452
+Best Loss-Err so far:   9.2906
+Epochs since last best: 5
+Current max epochs: 30
+Total epoch time:  8.46 s
+__________________________________________________
+Epoch 28:
+Learning rate:     0.001
+Batch Size: 16
+Training Batches:   0%|          | 0/36 [00:00<?, ?batch/s]Training Batches:  17%|#6        | 6/36 [00:01<00:05,  5.01batch/s]Training Batches:  33%|###3      | 12/36 [00:02<00:04,  5.03batch/s]Training Batches:  50%|#####     | 18/36 [00:03<00:03,  5.06batch/s]Training Batches:  67%|######6   | 24/36 [00:04<00:02,  4.92batch/s]Training Batches:  81%|########  | 29/36 [00:05<00:01,  4.83batch/s]Training Batches:  94%|#########4| 34/36 [00:06<00:00,  4.87batch/s]                                                                    Training time:  7.3 s
+Validating...
+Evaluating train:   0%|          | 0/1 [00:00<?, ?batch/s]                                                          Evaluating valid:   0%|          | 0/1 [00:00<?, ?batch/s]                                                                              train         valid
+---------------------------------------
+TpA-RMSE :       0.051184      0.063234
+TpA-MAE  :       0.035002      0.043924
+TpA-RSQ  :        0.99578       0.99471
+ForceRMSE:         1.2763   *    1.4139
+ForceMAE :        0.66995   *   0.75117
+ForceRsq :        0.77639       0.82098
+T-Hier   :        0.14657       0.19577
+L2Reg    :         68.097        68.097
+Loss-Err :         10.565        12.881
+Loss-Reg :        0.14664       0.19584
+Loss     :         10.712        13.077
+Best Loss-Err so far:   9.2906
+Epochs since last best: 6
+Current max epochs: 30
+Total epoch time:  8.44 s
+__________________________________________________
+Epoch 29:
+Learning rate:     0.001
+Batch Size: 16
+Training Batches:   0%|          | 0/36 [00:00<?, ?batch/s]Training Batches:  14%|#3        | 5/36 [00:01<00:06,  4.94batch/s]Training Batches:  28%|##7       | 10/36 [00:02<00:05,  4.97batch/s]Training Batches:  44%|####4     | 16/36 [00:03<00:03,  5.13batch/s]Training Batches:  61%|######1   | 22/36 [00:04<00:02,  5.09batch/s]Training Batches:  78%|#######7  | 28/36 [00:05<00:01,  4.88batch/s]Training Batches:  92%|#########1| 33/36 [00:06<00:00,  4.74batch/s]                                                                    Training time:  7.33 s
+Validating...
+Evaluating train:   0%|          | 0/1 [00:00<?, ?batch/s]                                                          Evaluating valid:   0%|          | 0/1 [00:00<?, ?batch/s]                                                                              train         valid
+---------------------------------------
+TpA-RMSE :       0.055782      0.046339
+TpA-MAE  :       0.037025      0.032034
+TpA-RSQ  :        0.99339       0.99716
+ForceRMSE:    *   0.92984   *    1.3665
+ForceMAE :        0.57425   *   0.72862
+ForceRsq :        0.86496       0.83277
+T-Hier   :        0.13505       0.18668
+L2Reg    :         68.204        68.204
+Loss-Err :         10.785        9.9325
+Loss-Reg :        0.13512       0.18674
+Loss     :          10.92        10.119
+Best Loss-Err so far:   9.2906
+Epochs since last best: 7
+Current max epochs: 30
+Total epoch time:  8.46 s
+Training phase ended.
+Reverting to best model found.
+Making plots over training time...
+Testing model...
+Evaluating train:   0%|          | 0/9 [00:00<?, ?batch/s]/Users/andrewtrepagnier/miniconda3/lib/python3.13/site-packages/torch/utils/data/dataloader.py:684: UserWarning: 'pin_memory' argument is set as true but not supported on MPS now, then device pinned memory won't be used.
+  warnings.warn(warn_msg)
+Evaluating train:  22%|##2       | 2/9 [00:01<00:04,  1.45batch/s]Evaluating train:  44%|####4     | 4/9 [00:02<00:03,  1.51batch/s]Evaluating train:  67%|######6   | 6/9 [00:03<00:01,  1.55batch/s]Evaluating train:  89%|########8 | 8/9 [00:05<00:00,  1.56batch/s]                                                                  Making plots. Saved location: plots/FinalTraining/train
+Saving plot at plots/FinalTraining/train/Hist2D-energy.pdf
+Saving plot at plots/FinalTraining/train/Hist2D-energyperatom.pdf
+Saving plot at plots/FinalTraining/train/Hist2D-force.pdf
+Saving plot at plots/FinalTraining/train/sense_0.pdf
+Evaluating valid:   0%|          | 0/1 [00:00<?, ?batch/s]/Users/andrewtrepagnier/miniconda3/lib/python3.13/site-packages/torch/utils/data/dataloader.py:684: UserWarning: 'pin_memory' argument is set as true but not supported on MPS now, then device pinned memory won't be used.
+  warnings.warn(warn_msg)
+                                                          Making plots. Saved location: plots/FinalTraining/valid
+Saving plot at plots/FinalTraining/valid/Hist2D-energy.pdf
+Saving plot at plots/FinalTraining/valid/Hist2D-energyperatom.pdf
+Saving plot at plots/FinalTraining/valid/Hist2D-force.pdf
+Saving plot at plots/FinalTraining/valid/sense_0.pdf
+Evaluating test:   0%|          | 0/90 [00:00<?, ?batch/s]/Users/andrewtrepagnier/miniconda3/lib/python3.13/site-packages/torch/utils/data/dataloader.py:684: UserWarning: 'pin_memory' argument is set as true but not supported on MPS now, then device pinned memory won't be used.
+  warnings.warn(warn_msg)
+/Users/andrewtrepagnier/Forks/hippynn-precision-typed/hippynn-precision-typed/hippynn/layers/hiplayers/sensitivity.py:19: UserWarning: Provided distances are underneath sensitivity range!
+Minimum distance in current batch: 0.9981989860534668
+Threshold distance for warning: tensor([[1.2801]]).
+Fraction of pairs under the threshold: 2.1993926111463225e-06
+Number of pairs under the threshold: 1
+  warnings.warn(
+Evaluating test:   2%|2         | 2/90 [00:01<00:55,  1.58batch/s]Evaluating test:   4%|4         | 4/90 [00:02<00:56,  1.52batch/s]Evaluating test:   7%|6         | 6/90 [00:03<00:54,  1.55batch/s]Evaluating test:   9%|8         | 8/90 [00:05<00:52,  1.56batch/s]Evaluating test:  11%|#1        | 10/90 [00:06<00:50,  1.58batch/s]Evaluating test:  13%|#3        | 12/90 [00:07<00:49,  1.56batch/s]Evaluating test:  16%|#5        | 14/90 [00:09<00:49,  1.55batch/s]Evaluating test:  18%|#7        | 16/90 [00:10<00:50,  1.45batch/s]Evaluating test:  20%|##        | 18/90 [00:11<00:49,  1.46batch/s]Evaluating test:  22%|##2       | 20/90 [00:13<00:47,  1.48batch/s]Evaluating test:  24%|##4       | 22/90 [00:14<00:44,  1.53batch/s]Evaluating test:  27%|##6       | 24/90 [00:15<00:43,  1.53batch/s]Evaluating test:  29%|##8       | 26/90 [00:17<00:42,  1.50batch/s]Evaluating test:  31%|###1      | 28/90 [00:18<00:40,  1.53batch/s]Evaluating test:  33%|###3      | 30/90 [00:19<00:39,  1.52batch/s]Evaluating test:  36%|###5      | 32/90 [00:21<00:38,  1.51batch/s]Evaluating test:  38%|###7      | 34/90 [00:22<00:37,  1.50batch/s]Evaluating test:  40%|####      | 36/90 [00:23<00:37,  1.46batch/s]Evaluating test:  42%|####2     | 38/90 [00:25<00:35,  1.48batch/s]Evaluating test:  44%|####4     | 40/90 [00:26<00:33,  1.50batch/s]Evaluating test:  47%|####6     | 42/90 [00:27<00:30,  1.55batch/s]Evaluating test:  49%|####8     | 44/90 [00:28<00:29,  1.57batch/s]Evaluating test:  51%|#####1    | 46/90 [00:30<00:27,  1.58batch/s]Evaluating test:  53%|#####3    | 48/90 [00:31<00:26,  1.58batch/s]Evaluating test:  56%|#####5    | 50/90 [00:32<00:25,  1.60batch/s]Evaluating test:  58%|#####7    | 52/90 [00:33<00:22,  1.66batch/s]Evaluating test:  60%|######    | 54/90 [00:34<00:22,  1.64batch/s]Evaluating test:  62%|######2   | 56/90 [00:36<00:20,  1.65batch/s]Evaluating test:  64%|######4   | 58/90 [00:37<00:19,  1.63batch/s]Evaluating test:  67%|######6   | 60/90 [00:38<00:17,  1.67batch/s]Evaluating test:  69%|######8   | 62/90 [00:39<00:16,  1.70batch/s]Evaluating test:  71%|#######1  | 64/90 [00:40<00:15,  1.70batch/s]Evaluating test:  73%|#######3  | 66/90 [00:42<00:14,  1.66batch/s]Evaluating test:  76%|#######5  | 68/90 [00:43<00:13,  1.63batch/s]Evaluating test:  78%|#######7  | 70/90 [00:44<00:11,  1.68batch/s]Evaluating test:  80%|########  | 72/90 [00:45<00:10,  1.64batch/s]Evaluating test:  82%|########2 | 74/90 [00:47<00:10,  1.53batch/s]Evaluating test:  84%|########4 | 76/90 [00:48<00:08,  1.56batch/s]Evaluating test:  87%|########6 | 78/90 [00:49<00:07,  1.58batch/s]Evaluating test:  89%|########8 | 80/90 [00:51<00:06,  1.53batch/s]Evaluating test:  91%|#########1| 82/90 [00:52<00:05,  1.56batch/s]Evaluating test:  93%|#########3| 84/90 [00:53<00:03,  1.59batch/s]Evaluating test:  96%|#########5| 86/90 [00:54<00:02,  1.59batch/s]Evaluating test:  98%|#########7| 88/90 [00:56<00:01,  1.53batch/s]                                                                   Making plots. Saved location: plots/FinalTraining/test
+Saving plot at plots/FinalTraining/test/Hist2D-energy.pdf
+Saving plot at plots/FinalTraining/test/Hist2D-energyperatom.pdf
+Saving plot at plots/FinalTraining/test/Hist2D-force.pdf
+Saving plot at plots/FinalTraining/test/sense_0.pdf
+                    train         valid          test
+-----------------------------------------------------
+TpA-RMSE :       0.055178      0.042111      0.054155
+TpA-MAE  :       0.031974      0.028378      0.033051
+TpA-RSQ  :        0.99508       0.99765       0.99538
+ForceRMSE:         1.1777        1.4618        1.1997
+ForceMAE :        0.63442       0.77998       0.63098
+ForceRsq :        0.79899       0.80863       0.78976
+T-Hier   :        0.14496       0.18929       0.14671
+L2Reg    :         66.916        66.916        66.916
+Loss-Err :         10.527        9.2906        10.551
+Loss-Reg :        0.14503       0.18936       0.14678
+Loss     :         10.672          9.48        10.698
+-----------------------------------------------------
+Training complete.
